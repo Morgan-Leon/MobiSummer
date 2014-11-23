@@ -2,6 +2,44 @@
 // 本类由系统自动生成，仅供测试用途
 class IndexAction extends Action {
     public function index(){
-	$this->show('<style type="text/css">*{ padding: 0; margin: 0; } div{ padding: 4px 48px;} body{ background: #fff; font-family: "微软雅黑"; color: #333;} h1{ font-size: 100px; font-weight: normal; margin-bottom: 12px; } p{ line-height: 1.8em; font-size: 36px }</style><div style="padding: 24px 48px;"> <h1>:)</h1><p>欢迎使用 <b>ThinkPHP</b>！</p></div><script type="text/javascript" src="http://tajs.qq.com/stats?sId=9347272" charset="UTF-8"></script>','utf-8');
+    $this->display();    
+    
+    }
+    public function learnMore(){
+	$this->show('<p>服务器能通过URL接收到数据
+		   更改<a href="http://192.169.250.54/MobiSummer/index.php/Index/archive/">
+		   {IP}/MobiSummer/index.php/Index/archive/</a>
+		   后面的参数，能传输到服务器中。</p>');
+	$this->show('<br><a href="http://192.169.250.54/MobiSummer/">Go Back</a>');
+    }
+    
+    public function archive(){
+	
+	//dump($_GET);
+	$product_id = $_GET["_URL_"][2];
+	$version = $_GET["_URL_"][3];
+	$imei = $_GET["_URL_"][4];
+	$androidid = $_GET["_URL_"][5];
+	$ip = $_GET["_URL_"][6];
+	$active_time = $_GET["_URL_"][7];
+	$postback_timestamp = $_GET["_URL_"][8];
+	$click_id = $_GET["_URL_"][9];
+	
+	
+
+	$str = "product_id = $product_id";
+	dump("product_id = $product_id");
+	dump("version = $version");
+	dump("imei = $imei");
+	dump("androidid  = $androidid ");
+	dump("ip = $ip");
+	dump("active_time = $active_time");
+	dump("postback_timestamp = $postback_timestamp");
+	dump("click_id = $click_id");
+	
+	    echo "EXAMPLE: ";
+	    echo "http://data.union.ucweb.com/RecvActionService?sign=default&sign_type=ip&advertiser={advertiser_name}&prod_id={product_id}&ver={version}&imei={imei}&androidid={androidid}&ip={ip}&activate_time={active_time}&timestamp={postback_timestamp}&clickid={click_id}&ua={user_agent}&imsi={imsi}&cid={cid}&isp={isp}&lat={lat}&lon={lon}";
+    
+	$this->show('<br><br><a href="http://192.169.250.54/MobiSummer/">Go Back</a>');
     }
 }
