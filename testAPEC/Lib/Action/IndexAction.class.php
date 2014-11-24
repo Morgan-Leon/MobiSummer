@@ -38,7 +38,7 @@ class IndexAction extends Action {
 	dump("click_id = $click_id");
 	
 	    echo "EXAMPLE: ";
-	    echo "http://data.union.ucweb.com/RecvActionService?sign=default&sign_type=ip&advertiser={advertiser_name}&prod_id={product_id}&ver={version}&imei={imei}&androidid={androidid}&ip={ip}&activate_time={active_time}&timestamp={postback_timestamp}&clickid={click_id}&ua={user_agent}&imsi={imsi}&cid={cid}&isp={isp}&lat={lat}&lon={lon}";
+	    echo "http://192.169.250.54/MobiSummer/index.php/Index/archive/&advertiser={advertiser_name}/&prod_id={product_id}/&ver={version}/&imei={imei}/&androidid={androidid}/&ip={ip}/&activate_time={active_time}/&timestamp={postback_timestamp}/&clickid={click_id}/&ua={user_agent}/&imsi={imsi}&cid={cid}/&isp={isp}/&lat={lat}/&lon={lon}";
     
 	$this->show('<br><br><a href="http://192.169.250.54/MobiSummer/">Go Back</a>');
     }
